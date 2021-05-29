@@ -1,32 +1,37 @@
-<template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+<template lang='pug'>
+div
+  b-navbar(toggleable="lg", type="info", variant="light")
+    logo-image
+        a(href='/home')
+          img(src='./assets/logo.png' height=60 )
+    b-navbar-brand(href="#") NavBar
+      
+
+    b-navbar-toggle(target="nav-collapse")
+
+    b-collapse#nav-collapse(is-nav)
+      b-navbar-nav
+        b-nav-item(href="#") Link
+        b-nav-item(href="#", disabled) Disabled
+
+      b-navbar-nav.ml-auto
+        b-nav-form
+          b-form-input.mr-sm-2(size="sm", placeholder="Search")
+          b-button.my-2.my-sm-0(size="sm", type="submit") Search
+
+        b-nav-item-dropdown(text="Lang", right)
+          b-dropdown-item(href="#") EN
+          b-dropdown-item(href="#") ES
+          b-dropdown-item(href="#") RU
+          b-dropdown-item(href="#") FA
+
+        b-nav-item-dropdown(right)
+          template(#button-content)
+            em User
+          b-dropdown-item(href="#") Profile
+          b-dropdown-item(href="#") Sign Out
+  router-view
 </template>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
