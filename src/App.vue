@@ -1,6 +1,6 @@
 <template lang='pug'>
 div
-  b-navbar.nav(toggleable="lg", type="info", variant="light")
+  b-navbar.nav(type="info")
     .logo-image
       a(href="/home")
         img(src="./assets/logo.png", height=60)
@@ -8,7 +8,9 @@ div
 
     b-navbar-toggle(target="nav-collapse")
 
+    b-collapseToolbar.ml-auto
       b-navbar-nav.ml-auto
+        b-button( v-b-toggle.hois hidden) hola
         b-nav-item-dropdown(right no-caret)
           template(#button-content)
             b-icon(icon='person-circle')
@@ -16,25 +18,19 @@ div
           b-dropdown-item(href="#") Profile
           b-dropdown-item(href="#") Sign Out
   .grid-container
-    b-nav.toolbar.w-36(vertical)
-      li.nav-item
-        a.nav-link.active(href="") Active
+    b-collapse(id='hois' visible)
+      b-nav.toolbar.w-36( vertical)
+        li.nav-item
+          a.nav-link.active(href="") Active
 
-      li.nav-item
-        a.nav-link(href="") Link
+        li.nav-item
+          a.nav-link(href="") Link
 
-      li.nav-item
-        a.nav-link(href="") Link
+        li.nav-item
+          a.nav-link(href="") Link
 
-      li.nav-item
-        a.nav-link.disabled(href="") Disabled
-
-      li.nav-item
-        b-button.navbar-toggler.collapseButton(
-          data-target=(variant = 'light'),
-          @click="collapseToolbar"
-        ) '>>'
-    | {{ hola }}
+        li.nav-item
+          a.nav-link.disabled(href="") Disabled      
 
     router-view
 </template>
