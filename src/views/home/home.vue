@@ -1,3 +1,13 @@
 <template lang="pug">
-    h1|hello
+    h1.h1 helloWorld
+
+        router-view
+    
 </template>
+<style>
+.h1 {
+    align-content: center;
+    text-align: center;
+    padding: 0px 16px;
+}
+</style>
