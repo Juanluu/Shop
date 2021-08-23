@@ -1,0 +1,9 @@
+{
+    "printWidth": 160,
+    "trailingComa": "es5",
+    "semi": false,
+    "singleQuote": false,
+    "vueIndentScriptAndStyle": false,
+    "arrowParens": "avoid",
+    "endOfLine": "auto"
+}

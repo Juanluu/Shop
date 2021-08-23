@@ -1,8 +1,7 @@
 <template lang="pug">
     h1.h1 helloWorld
+      router-view
 
-        router-view
-    
 </template>
 <style>
 .h1 {

@@ -1,6 +1,6 @@
 <template lang="pug">
-    h1.h1 Catalogo bitch
-    
+  h1.h1 Catalogo bitch
+
 </template>
 <style>
 .h1 {
